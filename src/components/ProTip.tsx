@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 /**
  * 直播间链接
  */
-function caihuaLink() {
+function CaihuaLink() {
   return (
     <a
       className="ximalaya-text-link"
