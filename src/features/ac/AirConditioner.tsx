@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid, Typography, Fade } from "@material-ui/core";
 import logo from "../../logo.png";
+import kttitle from "../../title.png";
 
 import * as pkg from "../../../package.json";
 
@@ -29,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   },
   acLogo: {
     width: 120,
+  },
+  actitle: {
+    width: 40,
   },
   acStatus: {
     backgroundColor: (props?: any) => props.backgroundColor || "transparent",
@@ -98,12 +102,32 @@ function AcLogo(props: any) {
     // <Box align="center" mt={12}>
     <Box textAlign="center" mt={5}>
       <a
-        href={pkg.repository.url}
+        href={"https://live.bilibili.com/7194086"}
         title={pkg.description}
         target="_blank"
         rel="noreferrer noopener"
       >
         <img className={props.className} src={logo} alt="logo" />
+      </a>
+    </Box>
+  );
+}
+
+/**
+ * 空调 title
+ * @param props
+ */
+ function Actitle(props: any) {
+  return (
+    // <Box align="center" mt={12}>
+    <Box textAlign="center" mt={3}>
+      <a
+        href={"https://live.bilibili.com/7194086"}
+        title={pkg.description}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <img className={props.className} src={kttitle} alt="title" />
       </a>
     </Box>
   );
@@ -307,6 +331,7 @@ export default function AirConditioner(props: {
           <AcDisplay mode={props.mode} />
         </Fade>
         <AcLogo className={classes.acLogo} />
+        <Actitle className={classes.actitle} />
         {/* <AirOutlet /> */}
         <AcStatus status={props.status} />
         <EnergyLabel className={classes.energyLabel} titleLength={6} />
