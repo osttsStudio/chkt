@@ -1,12 +1,12 @@
 {
-  "name": "air-conditioner",
-  "description": "云空调，便携小空调",
-  "version": "0.1.2",
+  "name": "chkt",
+  "description": "菜花空调",
+  "version": "0.1.5",
   "private": true,
   "author": {
-    "url": "https://www.yunyoujun.cn",
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun"
+    "url": "https://github.com/SHDocter/chkt",
+    "email": "Sun_Set1102@outlook.com",
+    "name": "SHDocter"
   },
   "scripts": {
     "dev": "yarn start",
@@ -40,7 +40,7 @@
     "type": "git",
     "url": "https://github.com/YunYouJun/air-conditioner"
   },
-  "homepage": "https://ac.yunyoujun.cn/",
+  "homepage": "https://github.com/SHDocter/chkt",
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",

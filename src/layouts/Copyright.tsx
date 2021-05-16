@@ -21,11 +21,11 @@ function Copyright() {
       <Box>
         <Typography variant="body2" color="textSecondary" align="center">
           {"© "}
-          <Link color="inherit" href={pkg.repository.url} target="_blank">
+          <Link color="inherit" href={"https://live.bilibili.com/7194086"} target="_blank">
             chkt
           </Link>
           {" - "}
-          <Link color="inherit" href={pkg.author.url} target="_blank">
+          <Link color="inherit" href={"https://live.bilibili.com/7194086"} target="_blank">
             {"狐日泽"}
           </Link>
         </Typography>
