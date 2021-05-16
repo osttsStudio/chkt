@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid, Typography, Fade } from "@material-ui/core";
-// import logo from "../../logo.svg";
+import logo from "../../logo.png";
 
 import * as pkg from "../../../package.json";
 
@@ -103,7 +103,7 @@ function AcLogo(props: any) {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img className={props.className} src="logo.png" alt="logo" />
+        <img className={props.className} src={logo} alt="logo" />
       </a>
     </Box>
   );
