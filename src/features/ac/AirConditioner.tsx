@@ -330,8 +330,8 @@ export default function AirConditioner(props: {
         <Fade in={props.status}>
           <AcDisplay mode={props.mode} />
         </Fade>
-        <AcLogo className={classes.acLogo} />
         <Actitle className={classes.actitle} />
+        <AcLogo className={classes.acLogo} />
         {/* <AirOutlet /> */}
         <AcStatus status={props.status} />
         <EnergyLabel className={classes.energyLabel} titleLength={6} />
