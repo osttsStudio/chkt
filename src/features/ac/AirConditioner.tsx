@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // visibility: (props) => props.visibility,
   },
   acLogo: {
-    width: 12,
+    width: 30,
   },
   acStatus: {
     backgroundColor: (props?: any) => props.backgroundColor || "transparent",
@@ -71,7 +71,7 @@ function AcTemperature() {
  * 显示屏（logo）
  * @param props
  */
- const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
+ const AcDisplay1 = React.forwardRef((props: { mode: AcMode }, ref) => {
   return (
     <Box
       {...props}
@@ -82,7 +82,8 @@ function AcTemperature() {
       color={acColor.display}
     >
       <Typography align="left" variant="subtitle2">
-        <span>{props.mode === "cold" ? "logo" : "☀️"}</span>️️
+        {/* <span>{props.mode === "cold" ? "logo" : "☀️"}</span> */}
+        <img src={logo} alt="logo" />️️
       </Typography>
       <AcTemperature />
     </Box>
@@ -327,6 +328,7 @@ export default function AirConditioner(props: {
       <AcBorder className={classes.acBorder}>
         <Fade in={props.status}>
           <AcDisplay mode={props.mode} />
+          <AcDisplay1 mode={props.mode} />
         </Fade>
         <AcLogo className={classes.acLogo} />
         <AirOutlet />
