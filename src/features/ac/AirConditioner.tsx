@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // visibility: (props) => props.visibility,
   },
   acLogo: {
-    width: 30,
+    width: 100,
   },
   acStatus: {
     backgroundColor: (props?: any) => props.backgroundColor || "transparent",
@@ -68,29 +68,6 @@ function AcTemperature() {
 }
 
 /**
- * 显示屏（logo）
- * @param props
- */
- const AcDisplay1 = React.forwardRef((props: { mode: AcMode }, ref) => {
-  return (
-    <Box
-      {...props}
-      ref={ref}
-      position="absolute"
-      top={25}
-      right={30}
-      color={acColor.display}
-    >
-      <Typography align="left" variant="subtitle2">
-        {/* <span>{props.mode === "cold" ? "logo" : "☀️"}</span> */}
-        <img src={logo} alt="logo" />️️
-      </Typography>
-      <AcTemperature />
-    </Box>
-  );
-});
-
-/**
  * 显示屏（温度/图标）
  * @param props
  */
@@ -119,7 +96,7 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
 function AcLogo(props: any) {
   return (
     // <Box align="center" mt={12}>
-    <Box textAlign="center" mt={12}>
+    <Box textAlign="center" mt={5}>
       <a
         href={pkg.repository.url}
         title={pkg.description}
