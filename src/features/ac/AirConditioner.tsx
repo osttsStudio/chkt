@@ -100,7 +100,7 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
  function Actitle(props: any) {
   return (
     // <Box align="center" mt={12}>
-    <Box textAlign="center" mt={3}>
+    <Box textAlign="center" mt={1}>
       <a
         href={"https://live.bilibili.com/7194086"}
         title={pkg.description}
@@ -120,7 +120,7 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
 function AcLogo(props: any) {
   return (
     // <Box align="center" mt={12}>
-    <Box textAlign="center" mt={5}>
+    <Box textAlign="center" mt={3}>
       <a
         href={"https://live.bilibili.com/7194086"}
         title={pkg.description}
