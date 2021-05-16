@@ -3,7 +3,7 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import ProTip from "../components/ProTip";
+// import ProTip from "../components/ProTip";
 import RemoteControl from "../components/RemoteControl";
 
 import AirConditioner from "../features/ac/AirConditioner";
@@ -46,7 +46,7 @@ function Home() {
           >
             便携小空调
           </Typography>
-          <ProTip />
+          {/* <ProTip /> */}
           <AirConditioner
             status={ac.status}
             temperature={ac.temperature}
