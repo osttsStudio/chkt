@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     // visibility: (props) => props.visibility,
   },
   acLogo: {
-    width: 100,
+    width: 120,
   },
   acStatus: {
     backgroundColor: (props?: any) => props.backgroundColor || "transparent",
@@ -90,11 +90,12 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
 });
 
 /**
- * 显示屏（温度/图标）
+ * 空调 Logo
  * @param props
  */
- const AcDisplay1 = React.forwardRef((props: { mode: AcMode }, ref) => {
+function AcLogo(props: any) {
   return (
+    // <Box align="center" mt={12}>
     <Box textAlign="center" mt={5}>
       <a
         href={pkg.repository.url}
@@ -102,30 +103,11 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img className={src={logo} alt="logo" />
+        <img className={props.className} src={logo} alt="logo" />
       </a>
     </Box>
   );
-
-// /**
-//  * 空调 Logo
-//  * @param props
-//  */
-// function AcLogo(props: any) {
-//   return (
-//     // <Box align="center" mt={12}>
-//     <Box textAlign="center" mt={5}>
-//       <a
-//         href={pkg.repository.url}
-//         title={pkg.description}
-//         target="_blank"
-//         rel="noreferrer noopener"
-//       >
-//         <img className={props.className} src={logo} alt="logo" />
-//       </a>
-//     </Box>
-//   );
-// }
+}
 
 // /**
 //  * 出风口线
@@ -324,10 +306,7 @@ export default function AirConditioner(props: {
         <Fade in={props.status}>
           <AcDisplay mode={props.mode} />
         </Fade>
-        <Fade in={props.status}>
-          <AcDisplay1 mode={props.mode} />
-        </Fade>
-        {/* <AcLogo className={classes.acLogo} /> */}
+        <AcLogo className={classes.acLogo} />
         {/* <AirOutlet /> */}
         <AcStatus status={props.status} />
         <EnergyLabel className={classes.energyLabel} titleLength={6} />
