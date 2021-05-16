@@ -102,11 +102,10 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img className={props.className} src={logo} alt="logo" />
+        <img className={src={logo} alt="logo" />
       </a>
     </Box>
   );
-});
 
 // /**
 //  * 空调 Logo
