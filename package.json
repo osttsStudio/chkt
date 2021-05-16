@@ -40,7 +40,11 @@
     "type": "git",
     "url": "https://github.com/YunYouJun/air-conditioner"
   },
-  "homepage": "https://ac.yunyoujun.cn/",
+  "repository1": {
+    "type": "git",
+    "url": "https://github.com/SHDocter/chkt"
+  },
+  "homepage": "https://chkt.vercel.app/",
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
