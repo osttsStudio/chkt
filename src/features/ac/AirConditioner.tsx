@@ -9,7 +9,7 @@ import "./AirConditioner.scss";
 import { useAppSelector } from "../../app/hooks";
 
 import { AcMode, selectTemperature } from "./acSlice";
-import { caihuaLink, jumpToCaihua } from "../adsense";
+import { CaihuaLink, jumpToCaihua } from "../adsense";
 
 const acColor = {
   border: "#e0e0e0",
