@@ -3,7 +3,7 @@ import ReactGA from "react-ga";
 /**
  * 菜花广告链接
  */
-export const caihuaLink =
+export const CaihuaLink =
   "https://live.bilibili.com/7194086";
 
 /**
@@ -18,7 +18,7 @@ export function jumpToCaihua() {
     hitType: "event",
     eventCategory: "Outbound Link",
     eventAction: "click",
-    eventLabel: "Ximalaya Adsense",
+    eventLabel: "Caihua Adsense",
   });
-  window.open(caihuaLink);
+  window.open(CaihuaLink);
 }

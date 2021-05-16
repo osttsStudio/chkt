@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import EmojiObjectsOutlinedIcon from "@material-ui/icons/EmojiObjectsOutlined";
-import { jumpToCaihua, caihuaLink } from "../features/adsense";
+import { jumpToCaihua, CaihuaLink } from "../features/adsense";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +19,7 @@ function caihuaLink() {
   return (
     <a
       className="ximalaya-text-link"
-      href={ximalayaLink}
+      href={CaihuaLink}
       target="_blank"
       onClick={() => {
         jumpToCaihua();
