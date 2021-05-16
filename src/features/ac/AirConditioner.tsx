@@ -125,9 +125,9 @@ function AcLogo(props: any) {
         title={pkg.description}
         target="_blank"
         rel="noreferrer noopener"
-      ></a>
+      >
         <img className={props.className} src={logo} alt="logo" />
-
+      </a>
     </Box>
   );
 }
