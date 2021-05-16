@@ -248,7 +248,7 @@ function EnergySavingLabel() {
       {/* eslint-disable-next-line */}
       <a
         className="ximalaya-link"
-        href={caihuaLink}
+        href={CaihuaLink}
         target="_blank"
         onClick={() => {
           jumpToCaihua();
