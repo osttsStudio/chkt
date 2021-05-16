@@ -120,18 +120,25 @@ function AcLogo(props: any) {
   return (
     // <Box align="center" mt={12}>
     <Box textAlign="center" mt={12}>
+      <a
+        href={pkg.repository.url}
+        title={pkg.description}
+        target="_blank"
+        rel="noreferrer noopener"
+      ></a>
         <img className={props.className} src={logo} alt="logo" />
+
     </Box>
   );
 }
 
-/**
- * 出风口线
- * @returns
- */
-function AirOutlet() {
-  return <Box mt={1} border={1} borderColor={acColor.border}></Box>;
-}
+// /**
+//  * 出风口线
+//  * @returns
+//  */
+// function AirOutlet() {
+//   return <Box mt={1} border={1} borderColor={acColor.border}></Box>;
+// }
 
 /**
  * 空调状态
@@ -326,7 +333,7 @@ export default function AirConditioner(props: {
           <AcDisplay1 mode={props.mode} />
         </Fade>
         <AcLogo className={classes.acLogo} />
-        <AirOutlet />
+        {/* <AirOutlet /> */}
         <AcStatus status={props.status} />
         <EnergyLabel className={classes.energyLabel} titleLength={6} />
         {process.env.REACT_APP_DISABLE_ADSENSE ? null : <EnergySavingLabel />}
