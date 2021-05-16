@@ -19,7 +19,7 @@ function CaihuaLink() {
   return (
     <a
       className="ximalaya-text-link"
-      href={CaihuaLink}
+      href={caihuaLink}
       target="_blank"
       onClick={() => {
         jumpToCaihua();
