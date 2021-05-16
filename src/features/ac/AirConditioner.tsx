@@ -103,7 +103,7 @@ function AcLogo(props: any) {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <img className={props.className} src={logo.png} alt="logo" />
+        <img className={props.className} src="logo.png" alt="logo" />
       </a>
     </Box>
   );
