@@ -328,6 +328,8 @@ export default function AirConditioner(props: {
       <AcBorder className={classes.acBorder}>
         <Fade in={props.status}>
           <AcDisplay mode={props.mode} />
+        </Fade>
+        <Fade in={props.status}>
           <AcDisplay1 mode={props.mode} />
         </Fade>
         <AcLogo className={classes.acLogo} />
