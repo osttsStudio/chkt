@@ -77,13 +77,13 @@ function AcTemperature() {
       {...props}
       ref={ref}
       position="absolute"
-      top={30}
-      right={70}
+      top={25}
+      right={30}
       color={acColor.display}
     >
       <Typography align="left" variant="subtitle2">
-        {/* <span>{props.mode === "cold" ? "logo" : "☀️"}</span> */}
-        <img src={logo} alt="logo" />️️
+        <span>{props.mode === "cold" ? "logo" : "☀️"}</span>
+        {/* <img src={logo} alt="logo" />️️ */}
       </Typography>
       <AcTemperature />
     </Box>
@@ -119,7 +119,7 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
 function AcLogo(props: any) {
   return (
     // <Box align="center" mt={12}>
-    <Box textAlign="center" mt={30}>
+    <Box textAlign="center" mt={5}>
       <a
         href={pkg.repository.url}
         title={pkg.description}
