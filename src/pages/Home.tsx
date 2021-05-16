@@ -44,7 +44,7 @@ function Home() {
             component="h1"
             gutterBottom
           >
-            便携小空调
+            菜花牌空调（bilibili限定）
           </Typography>
           {/* <ProTip /> */}
           <AirConditioner

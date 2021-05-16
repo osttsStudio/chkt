@@ -10,7 +10,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
           {"© "}
           <Link color="inherit" href={pkg.repository.url} target="_blank">
-            Yun Air Conditioner
+            原项目：Yun Air Conditioner
           </Link>
           {" - "}
           <Link color="inherit" href={pkg.author.url} target="_blank">
@@ -18,8 +18,20 @@ function Copyright() {
           </Link>
         </Typography>
       </Box>
+      <Box>
+        <Typography variant="body2" color="textSecondary" align="center">
+          {"© "}
+          <Link color="inherit" href={pkg.repository.url} target="_blank">
+            chkt
+          </Link>
+          {" - "}
+          <Link color="inherit" href={pkg.author.url} target="_blank">
+            {"狐日泽"}
+          </Link>
+        </Typography>
+      </Box>
       <Typography variant="body2" color="textSecondary" align="center">
-        {" 2019 - " + new Date().getFullYear()}
+        {" 2021 - " + new Date().getFullYear()}
       </Typography>
     </div>
   );
