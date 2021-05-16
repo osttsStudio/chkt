@@ -90,12 +90,11 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
 });
 
 /**
- * 空调 Logo
+ * 显示屏（温度/图标）
  * @param props
  */
-function AcLogo(props: any) {
+ const AcDisplay1 = React.forwardRef((props: { mode: AcMode }, ref) => {
   return (
-    // <Box align="center" mt={12}>
     <Box textAlign="center" mt={5}>
       <a
         href={pkg.repository.url}
@@ -107,7 +106,27 @@ function AcLogo(props: any) {
       </a>
     </Box>
   );
-}
+});
+
+// /**
+//  * 空调 Logo
+//  * @param props
+//  */
+// function AcLogo(props: any) {
+//   return (
+//     // <Box align="center" mt={12}>
+//     <Box textAlign="center" mt={5}>
+//       <a
+//         href={pkg.repository.url}
+//         title={pkg.description}
+//         target="_blank"
+//         rel="noreferrer noopener"
+//       >
+//         <img className={props.className} src={logo} alt="logo" />
+//       </a>
+//     </Box>
+//   );
+// }
 
 // /**
 //  * 出风口线
@@ -306,7 +325,10 @@ export default function AirConditioner(props: {
         <Fade in={props.status}>
           <AcDisplay mode={props.mode} />
         </Fade>
-        <AcLogo className={classes.acLogo} />
+        <Fade in={props.status}>
+          <AcDisplay1 mode={props.mode} />
+        </Fade>
+        {/* <AcLogo className={classes.acLogo} /> */}
         {/* <AirOutlet /> */}
         <AcStatus status={props.status} />
         <EnergyLabel className={classes.energyLabel} titleLength={6} />
