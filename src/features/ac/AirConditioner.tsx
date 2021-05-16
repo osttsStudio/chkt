@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     width: 120,
   },
   actitle: {
-    width: 40,
+    width: 120,
   },
   acStatus: {
     backgroundColor: (props?: any) => props.backgroundColor || "transparent",
@@ -94,26 +94,6 @@ const AcDisplay = React.forwardRef((props: { mode: AcMode }, ref) => {
 });
 
 /**
- * 空调 Logo
- * @param props
- */
-function AcLogo(props: any) {
-  return (
-    // <Box align="center" mt={12}>
-    <Box textAlign="center" mt={5}>
-      <a
-        href={"https://live.bilibili.com/7194086"}
-        title={pkg.description}
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <img className={props.className} src={logo} alt="logo" />
-      </a>
-    </Box>
-  );
-}
-
-/**
  * 空调 title
  * @param props
  */
@@ -128,6 +108,26 @@ function AcLogo(props: any) {
         rel="noreferrer noopener"
       >
         <img className={props.className} src={kttitle} alt="title" />
+      </a>
+    </Box>
+  );
+}
+
+/**
+ * 空调 Logo
+ * @param props
+ */
+function AcLogo(props: any) {
+  return (
+    // <Box align="center" mt={12}>
+    <Box textAlign="center" mt={5}>
+      <a
+        href={"https://live.bilibili.com/7194086"}
+        title={pkg.description}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <img className={props.className} src={logo} alt="logo" />
       </a>
     </Box>
   );
