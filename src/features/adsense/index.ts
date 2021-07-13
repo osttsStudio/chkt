@@ -19,5 +19,5 @@ export function jumpToCaihua() {
     eventAction: "click",
     eventLabel: "Caihua Adsense",
   });
-  window.open(ChiiLink);
+  window.open(CaihuaLink);
 }
