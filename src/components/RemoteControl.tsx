@@ -1,8 +1,5 @@
-import {
-  createTheme,
-  makeStyles,
-  ThemeProvider,
-} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/styles";
+import { createTheme, Theme, ThemeProvider } from "@material-ui/core/styles";
 import { Box, Fab } from "@material-ui/core";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -15,18 +12,15 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import {
   decreaseTemperature,
   increaseTemperature,
-  setMode,
+  toggleMode,
   toggleStatus,
 } from "../features/ac/acSlice";
 import { RootState } from "../app/store";
 import { getAssetsUrl } from "../assets/utils";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   margin: {
-    margin: theme.spacing(1),
-  },
-  extendedIcon: {
-    marginRight: theme.spacing(1),
+    margin: 8,
   },
 }));
 
@@ -128,10 +122,10 @@ const customTheme = createTheme({
   },
 });
 
-const SOUND_DI_PATH = getAssetsUrl("/assets/audio/di.mp3");
-const SOUND_AC_WORK_PATH = getAssetsUrl("/assets/audio/ac-work.mp3");
+const SOUND_DI_PATH = getAssetsUrl("/assets/audio/di.m4a");
+const SOUND_AC_WORK_PATH = getAssetsUrl("/assets/audio/ac-work.m4a");
 const SOUND_AIR_EXTRACTOR_FAN_PATH = getAssetsUrl(
-  "/assets/audio/air-extractor-fan.mp3"
+  "/assets/audio/air-extractor-fan.m4a"
 );
 
 /**
@@ -158,7 +152,7 @@ export default function RemoteControl() {
           aria-label="cold"
           className={classes.margin}
           onClick={() => {
-            dispatch(setMode("cold"));
+            dispatch(toggleMode("cold"));
           }}
         >
           <AcUnitIcon />
@@ -181,7 +175,7 @@ export default function RemoteControl() {
           className={classes.margin}
           style={{ backgroundColor: "orange", color: "white" }}
           onClick={() => {
-            dispatch(setMode("hot"));
+            dispatch(toggleMode("hot"));
           }}
         >
           <WbSunnyIcon />
